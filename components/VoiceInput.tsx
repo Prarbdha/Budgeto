@@ -17,7 +17,8 @@ interface VoiceInputProps {
 export default function VoiceInput({ onTranscript, disabled = false }: VoiceInputProps) {
   const [isListening, setIsListening] = useState(false);
   const [isSupported, setIsSupported] = useState(false);
-  const recognitionRef = useRef<SpeechRecognition | null>(null);
+  const recognitionRef = useRef<any>(null);
+
 
   useEffect(() => {
     // Check if browser supports Web Speech API
