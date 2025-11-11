@@ -1,4 +1,4 @@
-# Smart Finance Manager 💰
+# Budgeto: Smart Finance Manager 💰
 
 A modern, AI-powered personal finance management web application built with Next.js 14, featuring voice input and OCR receipt scanning.
 
@@ -22,6 +22,8 @@ A modern, AI-powered personal finance management web application built with Next
 - **Charts**: Recharts
 - **OCR**: Tesseract.js
 - **Voice Recognition**: Web Speech API
+- **Deployment**: Vercel
+
 
 ## 📋 Prerequisites
 
