@@ -28,6 +28,7 @@ export async function verifyPassword(plain: string, hash: string): Promise<boole
 export interface SessionPayload {
   userId: string;
   email: string;
+  [key: string]: unknown;
 }
 
 export async function signSession(payload: SessionPayload): Promise<string> {
