@@ -8,6 +8,7 @@ import { cookies } from 'next/headers';
 import { revalidatePath } from 'next/cache';
 import connectDB from '@/lib/mongodb';
 import User from '@/models/User';
+import { redirect } from 'next/navigation';
 import { hashPassword, verifyPassword, signSession, SESSION_COOKIE } from '@/lib/auth';
 
 export async function signupAction(formData: {
@@ -89,9 +90,8 @@ export async function signinAction(formData: {
 }
 
 export async function signoutAction() {
-  cookies().delete(SESSION_COOKIE);
-  revalidatePath('/dashboard');
-  return { success: true };
+  // perform sign-out logic
+  redirect('/login');
 }
 
 
